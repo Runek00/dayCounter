@@ -1,0 +1,4 @@
+<input name="dateFrom" type="date" hx-get="/dateChange" hx-trigger="change" th:value="${dateFrom}">
+<input name="dateTo" type="date" hx-get="/dateChange" hx-trigger="change" th:value="${dateTo}">
+<input name="days" type="number" hx-get="/days" hx-trigger="change delay:500ms, keyup changed delay:500ms" th:value="${days}">
+<input name="weekdays" type="number" hx-get="/weekdays" hx-trigger="change delay:500ms, keyup changed delay:500ms" th:value="${weekdays}">
