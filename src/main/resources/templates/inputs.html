@@ -2,11 +2,14 @@
 <input id="dateFrom" name="dateFrom" type="date" hx-get="/dateChange" hx-trigger="change" th:value="${dateFrom}">
 <div>
     <label for="days">days</label>
-    <input id="days" width="6" name="days" type="number" hx-get="/days" hx-trigger="change delay:500ms, keyup changed delay:500ms"
+    <input id="days" width="6" name="days" type="number" hx-get="/days" hx-trigger="change delay:200ms, keyup changed delay:200ms"
            th:value="${days}" style="width:50px;">
     <label for="weekdays">weekdays</label>
-    <input id="weekdays" name="weekdays" type="number" hx-get="/weekdays" hx-trigger="change delay:500ms, keyup changed delay:500ms"
+    <input id="weekdays" name="weekdays" type="number" hx-get="/weekdays" hx-trigger="change delay:200ms, keyup changed delay:200ms"
            th:value="${weekdays}" style="width:50px;">
+    <label for="workdays">workdays</label>
+    <input id="workdays" name="workdays" type="number" hx-get="/workdays" hx-trigger="change delay:200ms, keyup changed delay:200ms"
+           th:value="${workdays}" style="width:50px;">
 </div>
 <label for="dateTo">date to</label>
 <input id="dateTo" name="dateTo" type="date" hx-get="/dateChange" hx-trigger="change" th:value="${dateTo}">
