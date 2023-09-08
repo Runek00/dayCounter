@@ -115,7 +115,12 @@ public class DayController {
     }
 
     private Long calculateWorkdays(LocalDate dateFrom, LocalDate dateTo, long weekdays) {
-        long holidays = getHolidaysCount(dateFrom, dateTo);
+        long holidays;
+        if (dateFrom.isAfter(dateTo)) {
+            holidays = -getHolidaysCount(dateTo, dateFrom);
+        } else {
+            holidays = getHolidaysCount(dateFrom, dateTo);
+        }
         return weekdays - holidays;
     }
 
